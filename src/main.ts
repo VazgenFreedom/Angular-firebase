@@ -15,7 +15,7 @@ import {
   withPreloading,
   PreloadAllModules,
 } from '@angular/router';
-//import { APP_ROUTES } from './app/app.routes';
+import { App_Routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -27,6 +27,6 @@ bootstrapApplication(AppComponent, {
       AngularFirestore,
       BrowserAnimationsModule
     ),
-    // provideRouter(APP_ROUTES, withPreloading(PreloadAllModules)),
+    provideRouter(App_Routes, withPreloading(PreloadAllModules)),
   ],
 });
