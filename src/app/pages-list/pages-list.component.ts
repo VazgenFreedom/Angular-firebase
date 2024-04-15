@@ -13,7 +13,7 @@ import { NgFor, AsyncPipe } from '@angular/common';
 export class PagesListComponent implements OnInit {
   pagesObservable!: Observable<any[]>;
 
-  constructor(private db: AngularFireDatabase) {}
+  constructor(public db: AngularFireDatabase) {}
 
   ngOnInit() {
     this.pagesObservable = this.getPages('/pages');
