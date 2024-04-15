@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AfService } from '../providers/af.service';
 import { CommonModule } from '@angular/common';
 import { User } from '../providers/user';
-
+import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   standalone: true,
