@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { CanActivateFn } from '@angular/router';
 
-import { subscriberGuard } from './subscriber.guard';
+import { subcriberGuard } from './subcriber.guard';
 
-describe('subscriberGuard', () => {
+describe('subcriberGuard', () => {
   const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => subscriberGuard(...guardParameters));
+      TestBed.runInInjectionContext(() => subcriberGuard(...guardParameters));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

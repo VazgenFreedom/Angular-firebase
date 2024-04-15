@@ -1,8 +1,8 @@
 import { ApplicationConfig } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
-import { App_Routes } from './app.routes';
+import { APP_ROUTES } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(App_Routes)],
+  providers: [provideRouter(APP_ROUTES)],
 };

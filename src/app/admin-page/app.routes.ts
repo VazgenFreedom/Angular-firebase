@@ -1,22 +1,25 @@
 import { Routes } from '@angular/router';
-import { PagesListComponent } from './pages-list/pages-list.component';
-import { AppComponent } from './app.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { AdminPageComponent } from './admin-page/admin-page.component';
-import { adminGuard } from './guards/admin.guard';
-import { subscriberGuard } from './guards/subscriber.guard';
+import { LoginPageComponent } from '../login-page/login-page.component';
+import { adminGuard } from '../guards/admin.guard';
 
-export const App_Routes: Routes = [
-  { path: '', component: AppComponent },
-  { path: 'login', component: LoginPageComponent },
+export const APP_ROUTES: Routes = [
   {
-    path: 'article',
-    component: PagesListComponent,
-    canActivate: [subscriberGuard],
+    path: 'home',
+    loadChildren: () =>
+      import('./front-page/front.routes').then((mod) => mod.FRONT_ROUTES),
+  },
+  {
+    path: 'login',
+    component: LoginPageComponent,
   },
   {
     path: 'admin',
-    loadChildren: 'app/admin-page/admin-page.module#AdminPageModule',
+    loadChildren: () =>
+      import('./../admin-page/admin-routes').then((mod) => mod.ADMIN_ROUTES),
     canActivate: [adminGuard],
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
   },
 ];

@@ -15,7 +15,7 @@ import {
   withPreloading,
   PreloadAllModules,
 } from '@angular/router';
-import { App_Routes } from './app/app.routes';
+import { APP_ROUTES } from './app/app.routes';
 import 'hammerjs';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
@@ -29,6 +29,8 @@ bootstrapApplication(AppComponent, {
       AngularFirestore,
       BrowserAnimationsModule
     ),
-    provideRouter(App_Routes, withPreloading(PreloadAllModules)), provideAnimationsAsync(), provideAnimationsAsync(),
+    provideRouter(APP_ROUTES, withPreloading(PreloadAllModules)),
+    provideAnimationsAsync(),
+    provideAnimationsAsync(),
   ],
 });

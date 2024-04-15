@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PagesListComponent } from './pages-list/pages-list.component';
 import { LoginPageComponent } from './login-page/login-page.component';
-import { AppNavbarComponent } from './app-navbar/app-navbar.component';
+import { AppNavbarComponent } from './admin-page/front-page/app-navbar/app-navbar.component';
 import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-root',
@@ -11,8 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
     RouterOutlet,
     PagesListComponent,
     LoginPageComponent,
-    AppNavbarComponent,
     MatButtonModule,
+    AppNavbarComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
