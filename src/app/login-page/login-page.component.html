@@ -1,9 +1,13 @@
 <h1>Login to your account using Google</h1>
 <button (click)="login()">Login</button>
-<div *ngIf="AfService.user | async as user">
+<div *ngIf="user">
   <img [src]="user.photoURL" alt="User's photo" />
   <h3>
     Hello {{ user.displayName }}
-    <button (click)="AfService.logOut()">Log out</button>
+    <button (click)="AfService.logout()">Log out</button>
   </h3>
+</div>
+<div *ngIf="user">
+  <p>Subscriber: {{ user.roles.subscriber ? true : false }}</p>
+  <p>Admin: {{ user.roles.admin ? true : false }}</p>
 </div>
