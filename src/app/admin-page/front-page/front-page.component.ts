@@ -7,8 +7,6 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
   standalone: true,
   imports: [RouterModule, AppNavbarComponent],
   templateUrl: './front-page.component.html',
-  styleUrl: './front-page.component.css'
+  styleUrl: './front-page.component.css',
 })
-export class FrontPageComponent {
-
-}
+export class FrontPageComponent {}
