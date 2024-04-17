@@ -6,7 +6,7 @@ export const APP_ROUTES: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./front-page/front.routes').then((mod) => mod.FRONT_ROUTES),
+      import('../front-page/front.routes').then((mod) => mod.FRONT_ROUTES),
   },
   {
     path: 'login',

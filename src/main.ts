@@ -1,23 +1,23 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
+import { importProvidersFrom } from '@angular/core';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { initializeApp } from '@angular/fire/app';
 import { AppComponent } from './app/app.component';
+
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { initializeApp } from 'firebase/app';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { environment } from './environments/environment';
-import { importProvidersFrom } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { environment } from './environments/environment';
 import {
   provideRouter,
   withPreloading,
   PreloadAllModules,
 } from '@angular/router';
 import { APP_ROUTES } from './app/app.routes';
+
 import 'hammerjs';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -30,7 +30,5 @@ bootstrapApplication(AppComponent, {
       BrowserAnimationsModule
     ),
     provideRouter(APP_ROUTES, withPreloading(PreloadAllModules)),
-    provideAnimationsAsync(),
-    provideAnimationsAsync(),
   ],
-});
+}).catch((err) => console.error(err));

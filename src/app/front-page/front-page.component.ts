@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AppNavbarComponent } from './app-navbar/app-navbar.component';
+import { AppNavbarComponent } from '../admin-page/app-navbar/app-navbar.component';
 
 @Component({
   selector: 'app-front-page',

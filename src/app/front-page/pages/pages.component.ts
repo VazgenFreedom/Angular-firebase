@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { MenusService } from '../../../service/menus/menus.service';
-import { PostsService } from '../../../service/posts/posts.service';
+import { MenusService } from '../../service/menus/menus.service';
+import { PostsService } from '../../service/posts/posts.service';
 import { NgFor } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
