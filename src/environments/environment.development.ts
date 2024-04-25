@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
   firebaseConfig: {
-    apiKey: 'AIzaSyAZc6c9MKbCID8foNkc9DI_dE2v--MEevU',
-    authDomain: 'angular-firebase-freedom.firebaseapp.com',
-    databaseURL: 'https://angular-firebase-freedom-default-rtdb.firebaseio.com',
-    projectId: 'angular-firebase-freedom',
-    storageBucket: 'angular-firebase-freedom.appspot.com',
-    messagingSenderId: '246125201963',
-    appId: '1:246125201963:web:944dcd1ff80afd06c3f86e',
-    measurementId: 'G-WLQC6KF8RN',
+    apiKey: 'AIzaSyCBQ26hyrsPIxJtN1MwAPycnBnqvaYAy9U',
+    authDomain: 'cms-angulario.firebaseapp.com',
+    databaseURL: 'https://cms-angulario-default-rtdb.firebaseio.com',
+    projectId: 'cms-angulario',
+    storageBucket: 'cms-angulario.appspot.com',
+    messagingSenderId: '911101178041',
+    appId: '1:911101178041:web:ebaf0abf3170e5962eab68',
+    measurementId: 'G-S34NPRN8E4',
   },
 };
